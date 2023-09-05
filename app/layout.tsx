@@ -1,3 +1,5 @@
+import Loglib from "@loglib/tracker/react"
+
 import { ThemeProvider } from "@/components/sites/theme-provider"
 
 import "./globals.css"
@@ -27,6 +29,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
+        <Loglib
+          config={{
+            id: "dev_dymple",
+          }}
+        />
       </body>
     </html>
   )
