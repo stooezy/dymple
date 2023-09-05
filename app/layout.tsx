@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/sites/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -20,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontSans.variable} font-sans`}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
