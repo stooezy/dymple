@@ -1,0 +1,11 @@
+# Ignore artifacts:
+cache
+.cache
+package.json
+pnpm-lock.yaml
+public
+dist
+node_modules
+.next
+build
+.vscode
